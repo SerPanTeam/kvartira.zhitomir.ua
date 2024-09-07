@@ -1,0 +1,22 @@
+// Миксин для шрифта
+@mixin font($size, $weight: normal) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+// Миксин для кнопок
+@mixin button($bg-color, $hover-color) {
+    background-color: $bg-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color $transition-time, transform $transition-time;
+
+    &:hover {
+        background-color: $hover-color;
+        transform: scale(1.05);
+    }
+}

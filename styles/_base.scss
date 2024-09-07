@@ -1,0 +1,29 @@
+@import 'variables';
+
+// Основные стили
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: $body-background-color;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: $heading-color;
+}
+
+h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+}

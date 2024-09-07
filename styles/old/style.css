@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "PT Sans", sans-serif;
   background-color: #FDF0D5;
@@ -60,7 +61,8 @@ h2 {
 .object .img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 .object .title {
@@ -238,8 +240,12 @@ button:last-child:hover {
     overflow: hidden;
   }
 }
-dialog {
+dialog[open] {
   display: flex;
+}
+
+dialog {
+  display: none;
   border: none;
   border-radius: 10px;
   padding: 0;
@@ -309,4 +315,67 @@ dialog::backdrop {
 }
 .send-content__btn-close:hover {
   background-color: #7f8c8d;
+}
+
+/* Основные стили для слайдера */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+}
+
+/* Контейнер для всех слайдов */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Стили для каждого слайда */
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* Изображение будет адаптироваться по высоте */
+  display: block; /* Убираем любые отступы вокруг изображений */
+  pointer-events: none;
+}
+
+/* Кнопки переключения */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 30px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Расположение кнопок */
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Изменение прозрачности при наведении */
+.prev:hover, .next:hover {
+  opacity: 1;
+}
+
+/* Скрываем кнопки на мобильных устройствах для лучшего UX */
+@media (max-width: 768px) {
+  .prev, .next {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

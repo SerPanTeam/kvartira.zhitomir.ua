@@ -1,0 +1,87 @@
+@import 'variables';
+
+dialog {
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+    background-color: $card-background-color;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.send-content {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $card-background-color;
+
+    &__h2 {
+        font-size: 1.8rem;
+        color: $heading-color;
+        text-align: center;
+    }
+
+    &__input,
+    &__textarea {
+        padding: 12px 15px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: $input-background-color;
+        color: #333;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+            border-color: $button-background-color;
+            box-shadow: 0 0 5px rgba(0, 48, 73, 0.3);
+            outline: none;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        height: 150px;
+    }
+
+    &__btn-send,
+    &__btn-close {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &__btn-send {
+        background-color: $button-background-color;
+        color: white;
+
+        &:hover {
+            background-color: $button-hover-background-color;
+        }
+    }
+
+    &__btn-close {
+        background-color: $button-secondary-background-color;
+        color: white;
+
+        &:hover {
+            background-color: $button-secondary-hover-background-color;
+        }
+    }
+}

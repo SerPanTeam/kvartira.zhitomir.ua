@@ -1,0 +1,26 @@
+@import 'variables';
+
+// Стили для кнопок
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: $button-background-color;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        background-color: $button-hover-background-color;
+        transform: scale(1.05);
+    }
+
+    &:last-child {
+        background-color: $button-secondary-background-color;
+
+        &:hover {
+            background-color: $button-secondary-hover-background-color;
+        }
+    }
+}

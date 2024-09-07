@@ -1,0 +1,72 @@
+@import 'variables';
+
+// Контейнер для объектов недвижимости
+.objects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+// Карточки недвижимости
+.object {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: $card-background-color;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .img {
+        grid-column: 1 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    .title {
+        grid-column: 1 / 3;
+        text-align: center;
+        text-transform: uppercase;
+        color: $card-title-color;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        text-align: right;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $card-price-color;
+    }
+
+    .phone,
+    .name {
+        text-align: left;
+        color: #555;
+    }
+
+    .sq {
+        text-align: right;
+        color: #555;
+    }
+}
