@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Недвижимость Житомира</h1>
+
+        <!-- Иконка гамбургера -->
+        <div class="burger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li class="menu-item">Главная</li>
+                <li class="menu-item">Квартиры
+                    <ul class="submenu">
+                        <li>Однокомнатные</li>
+                        <li>Двухкомнатные</li>
+                        <li>Трехкомнатные</li>
+                    </ul>
+                </li>
+                <li class="menu-item">Частный сектор
+                    <ul class="submenu">
+                        <li>Дома</li>
+                        <li>Части домов</li>
+                        <li>Дачи</li>
+                    </ul>
+                </li>
+                <li class="menu-item">Участки
+                    <ul class="submenu">
+                        <li>В городе</li>
+                        <li>За городом</li>
+                        <li>ОСГ</li>
+                    </ul>
+                </li>
+                <li class="menu-item">Контакты</li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section class="objects">
+            <div class="object">
+                <div class="id">№:99999</div>
+                <div class="price">10000$</div>
+                <div class="title">Житомир, центр, Восточная</div>
+                <!-- <div class="title">1к. квартира</div> -->
+                <div class="img"><img src="https://kvartira.zhitomir.ua/images/listing_photos/12630_img0902.jpg" alt="">
+                </div>
+                <div class="phone">+38(063)229-28-03</div>
+                <div class="name">Сергей</div>
+                <div class="rooms">Комн.: 3</div>
+                <div class="sq">Площ: 100/30/7</div>
+                <button>Написать</button>
+                <button>Запомнить</button>
+            </div>
+        </section>
+        <dialog id="sendDialog">
+            <div class="send-content">
+                <h2 class="send-content__h2">Отправьте сообщение</h2>
+                <input class="send-content__input" type="text" placeholder="Ваше имя">
+                <input class="send-content__input" type="text" placeholder="Контакты">
+                <textarea class="send-content__textarea" id="sendMessageTextArea" rows="4"></textarea>
+                <button class="send-content__btn-send" onclick="closeSendDialog()">Отправить</button>
+                <button class="send-content__btn- close" onclick="closeSendDialog()">Закрыть</button>
+            </div>
+        </dialog>
+    </main>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
