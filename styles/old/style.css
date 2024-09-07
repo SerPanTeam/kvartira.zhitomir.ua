@@ -373,9 +373,4 @@ dialog::backdrop {
   opacity: 1;
 }
 
-/* Скрываем кнопки на мобильных устройствах для лучшего UX */
-@media (max-width: 768px) {
-  .prev, .next {
-    display: none;
-  }
-}/*# sourceMappingURL=style.css.map */
+/* Скрываем кнопки на мобильных устройствах для лучшего UX *//*# sourceMappingURL=style.css.map */

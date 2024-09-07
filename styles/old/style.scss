@@ -446,8 +446,8 @@ dialog {
 }
 
 /* Скрываем кнопки на мобильных устройствах для лучшего UX */
-@media (max-width: 768px) {
-    .prev, .next {
-        display: none;
-    }
-}
+// @media (max-width: 768px) {
+//     .prev, .next {
+//         display: none;
+//     }
+// }
